@@ -12,10 +12,16 @@ class MovielistViewModel: ObservableObject {
     
     @Published var moviesList: [Result] = []
     let apiClient = MoviesAPIClient()
+    var pageNumber = 1
+    var totalPages = 1
     
     func loadAllMovie(searchQurey: String?) {
         AsyncTask {
-            moviesList = await getMovieList(searchQurey: searchQurey) ?? []
+            if let newMovies = await getMovieList(searchQurey: searchQurey) {
+                DispatchQueue.main.async {
+                    self.moviesList.append(contentsOf: newMovies)
+                }
+            }
         }
     }
     
@@ -26,6 +32,10 @@ class MovielistViewModel: ObservableObject {
         if let searchQurey {
             params["qurey"] = searchQurey
         }
+        if pageNumber < totalPages {
+            pageNumber += 1
+            params["page"] = pageNumber
+        }
         return params
     }
     
@@ -33,7 +43,6 @@ class MovielistViewModel: ObservableObject {
         do {
             let body = try JSONDecoder().decode(Welcome.self, from: data)
             return body
-            
         } catch {
             print("Unable to parse response: \(error.localizedDescription)")
             return nil
@@ -46,6 +55,7 @@ class MovielistViewModel: ObservableObject {
         let (data, _, _) = await apiClient.fetch(endPoint: "\(path)/movie", param: param)
         if let aData = data {
             guard let response = decodeData(aData) else { return nil }
+            totalPages = response.totalPages
             return response.results
         } else {
             return nil

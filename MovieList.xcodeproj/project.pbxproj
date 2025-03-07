@@ -19,6 +19,9 @@
 		8DC2F7BE2D79B62100802812 /* HeadingStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC2F7BD2D79B62100802812 /* HeadingStyle.swift */; };
 		8DC2F7C02D7AB39600802812 /* hardcodeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC2F7BF2D7AB39600802812 /* hardcodeData.swift */; };
 		8DC2F7C22D7AB9B700802812 /* DecodableWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC2F7C12D7AB9B700802812 /* DecodableWrapper.swift */; };
+		8DC2F7C42D7AC21E00802812 /* MovieListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC2F7C32D7AC21E00802812 /* MovieListCell.swift */; };
+		8DC2F7C82D7AC5F600802812 /* DownloadImageAsyncVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC2F7C72D7AC5F600802812 /* DownloadImageAsyncVM.swift */; };
+		8DC2F7CB2D7AC66000802812 /* DownloadImageAsyncLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC2F7CA2D7AC66000802812 /* DownloadImageAsyncLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		8DC2F7BD2D79B62100802812 /* HeadingStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadingStyle.swift; sourceTree = "<group>"; };
 		8DC2F7BF2D7AB39600802812 /* hardcodeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hardcodeData.swift; sourceTree = "<group>"; };
 		8DC2F7C12D7AB9B700802812 /* DecodableWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableWrapper.swift; sourceTree = "<group>"; };
+		8DC2F7C32D7AC21E00802812 /* MovieListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListCell.swift; sourceTree = "<group>"; };
+		8DC2F7C72D7AC5F600802812 /* DownloadImageAsyncVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageAsyncVM.swift; sourceTree = "<group>"; };
+		8DC2F7CA2D7AC66000802812 /* DownloadImageAsyncLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageAsyncLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,7 @@
 				8DC2F7B52D79B1BF00802812 /* Dashboard */,
 				8DC2F7B22D79B07500802812 /* Model */,
 				8D0E582A2D7866A000CC8FB8 /* API */,
+				8DC2F7C92D7AC63A00802812 /* DownloadImageAsyncLoader */,
 				8DC2F7B92D79B3C700802812 /* Utilities */,
 				8D0E581B2D78621F00CC8FB8 /* Assets.xcassets */,
 				8D0E581D2D78621F00CC8FB8 /* Preview Content */,
@@ -107,6 +114,7 @@
 			children = (
 				8DC2F7B62D79B1F000802812 /* DashboardViewModel */,
 				8D0E582B2D7866B600CC8FB8 /* MoviesListPage.swift */,
+				8DC2F7C32D7AC21E00802812 /* MovieListCell.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -115,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				8DC2F7B72D79B21300802812 /* MovielistViewModel.swift */,
+				8DC2F7C72D7AC5F600802812 /* DownloadImageAsyncVM.swift */,
 			);
 			path = DashboardViewModel;
 			sourceTree = "<group>";
@@ -136,6 +145,14 @@
 				8DC2F7BD2D79B62100802812 /* HeadingStyle.swift */,
 			);
 			path = Styles;
+			sourceTree = "<group>";
+		};
+		8DC2F7C92D7AC63A00802812 /* DownloadImageAsyncLoader */ = {
+			isa = PBXGroup;
+			children = (
+				8DC2F7CA2D7AC66000802812 /* DownloadImageAsyncLoader.swift */,
+			);
+			path = DownloadImageAsyncLoader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +231,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DC2F7C42D7AC21E00802812 /* MovieListCell.swift in Sources */,
+				8DC2F7CB2D7AC66000802812 /* DownloadImageAsyncLoader.swift in Sources */,
 				8DC2F7BC2D79B3F900802812 /* DefaultBG.swift in Sources */,
 				8DC2F7C02D7AB39600802812 /* hardcodeData.swift in Sources */,
 				8D0E582C2D7866B600CC8FB8 /* MoviesListPage.swift in Sources */,
@@ -222,6 +241,7 @@
 				8DC2F7B42D79B0D000802812 /* MovieListModel.swift in Sources */,
 				8DC2F7B82D79B21300802812 /* MovielistViewModel.swift in Sources */,
 				8DC2F7BE2D79B62100802812 /* HeadingStyle.swift in Sources */,
+				8DC2F7C82D7AC5F600802812 /* DownloadImageAsyncVM.swift in Sources */,
 				8D0E582E2D7866EF00CC8FB8 /* MoviesAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
