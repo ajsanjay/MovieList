@@ -32,14 +32,12 @@ struct MoviesListPage: View {
                                 }
                             }
                             .listRowBackground(Color.clear)
-                            .listRowSeparator(.hidden)
                             .listRowInsets(EdgeInsets(top: 5, leading: 5, bottom: 0, trailing: 5))
                     }
                 }
                 .listStyle(PlainListStyle())
                 .scrollContentBackground(.hidden)
                 .background(.clear)
-                .listRowSeparator(.hidden)
             }
         }
         .onAppear {

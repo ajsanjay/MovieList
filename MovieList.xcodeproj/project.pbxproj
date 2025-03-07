@@ -78,7 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				8D0E58172D78621C00CC8FB8 /* MovieListApp.swift */,
-				8DC2F7B52D79B1BF00802812 /* Dashboard */,
+				8DC2F7B52D79B1BF00802812 /* List */,
+				8DC2F7D02D7AEF5800802812 /* Detail */,
 				8DC2F7B22D79B07500802812 /* Model */,
 				8D0E582A2D7866A000CC8FB8 /* API */,
 				8DC2F7C92D7AC63A00802812 /* DownloadImageAsyncLoader */,
@@ -113,7 +114,7 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		8DC2F7B52D79B1BF00802812 /* Dashboard */ = {
+		8DC2F7B52D79B1BF00802812 /* List */ = {
 			isa = PBXGroup;
 			children = (
 				8DC2F7B62D79B1F000802812 /* DashboardViewModel */,
@@ -121,7 +122,7 @@
 				8DC2F7C32D7AC21E00802812 /* MovieListCell.swift */,
 				8DC2F7CE2D7ADBE600802812 /* SearchBarView.swift */,
 			);
-			path = Dashboard;
+			path = List;
 			sourceTree = "<group>";
 		};
 		8DC2F7B62D79B1F000802812 /* DashboardViewModel */ = {
@@ -159,6 +160,13 @@
 				8DC2F7CA2D7AC66000802812 /* DownloadImageAsyncLoader.swift */,
 			);
 			path = DownloadImageAsyncLoader;
+			sourceTree = "<group>";
+		};
+		8DC2F7D02D7AEF5800802812 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
