@@ -27,6 +27,7 @@
 		8DC2F7D22D7AEFB800802812 /* MovieDetailPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC2F7D12D7AEFB800802812 /* MovieDetailPage.swift */; };
 		8DC2F7D42D7AFED100802812 /* NavHeadingStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC2F7D32D7AFED100802812 /* NavHeadingStyle.swift */; };
 		8DC2F7DD2D7B0A6900802812 /* MovieList_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC2F7DC2D7B0A6900802812 /* MovieList_Tests.swift */; };
+		8DC2F7E62D7B0DA100802812 /* ReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = 8DC2F7E52D7B0DA100802812 /* ReadMe.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		8DC2F7D32D7AFED100802812 /* NavHeadingStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavHeadingStyle.swift; sourceTree = "<group>"; };
 		8DC2F7DA2D7B0A6900802812 /* MovieList_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieList_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DC2F7DC2D7B0A6900802812 /* MovieList_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieList_Tests.swift; sourceTree = "<group>"; };
+		8DC2F7E52D7B0DA100802812 /* ReadMe.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		8D0E58162D78621C00CC8FB8 /* MovieList */ = {
 			isa = PBXGroup;
 			children = (
+				8DC2F7E52D7B0DA100802812 /* ReadMe.md */,
 				8D0E58172D78621C00CC8FB8 /* MovieListApp.swift */,
 				8DC2F7B52D79B1BF00802812 /* List */,
 				8DC2F7D02D7AEF5800802812 /* Detail */,
@@ -294,6 +297,7 @@
 			files = (
 				8D0E581F2D78621F00CC8FB8 /* Preview Assets.xcassets in Resources */,
 				8D0E581C2D78621F00CC8FB8 /* Assets.xcassets in Resources */,
+				8DC2F7E62D7B0DA100802812 /* ReadMe.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
