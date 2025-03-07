@@ -9,7 +9,8 @@ import SwiftUI
 
 struct MovieListCell: View {
     
-    @StateObject var viewModel = DownloadImageAsyncVM(image: nil, data: movieList)
+    @StateObject var viewModel = DownloadImageAsyncVM(image: nil, data: movieList, isDetail: false)
+    let isDetail: Bool
     
     var body: some View {
         ZStack {
@@ -19,7 +20,20 @@ struct MovieListCell: View {
                     .scaledToFit()
                 VStack() {
                     Spacer()
-                    MovieTitleStyle(title: viewModel.data.originalTitle)
+                    if !isDetail {
+                        MovieTitleStyle(title: viewModel.data.originalTitle)
+                    } else {
+                        HStack {
+                            Spacer()
+                            ZStack {
+                                Rectangle()
+                                    .fill(.ratingYellow)
+                                Text("\(viewModel.data.voteAverage, specifier: "%.2f")")
+                            }
+                            .frame(width: 70, height: 40)
+                            .cornerRadius(5)
+                        }
+                    }
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
             } else {
@@ -38,5 +52,5 @@ struct MovieListCell: View {
 }
 
 #Preview {
-    MovieListCell()
+    MovieListCell(isDetail: false)
 }

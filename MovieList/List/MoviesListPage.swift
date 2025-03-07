@@ -25,7 +25,7 @@ struct MoviesListPage: View {
                 }
                 List {
                     ForEach(viewModel.moviesList, id: \.id) { movie in
-                        MovieListCell(viewModel: DownloadImageAsyncVM(image: nil, data: movie))
+                        MovieListCell(viewModel: DownloadImageAsyncVM(image: nil, data: movie, isDetail: false), isDetail: false)
                             .onAppear {
                                 if movie.id == viewModel.moviesList.last?.id {
                                     viewModel.loadAllMovie(searchQurey: nil)
@@ -33,6 +33,10 @@ struct MoviesListPage: View {
                             }
                             .listRowBackground(Color.clear)
                             .listRowInsets(EdgeInsets(top: 5, leading: 5, bottom: 0, trailing: 5))
+                            .onTapGesture {
+                                viewModel.movieDetailPage.toggle()
+                                viewModel.selectedMovie = movie
+                            }
                     }
                 }
                 .listStyle(PlainListStyle())
@@ -52,6 +56,9 @@ struct MoviesListPage: View {
                 viewModel.loadAllMovie(searchQurey: nil)
             }
         }
+        .fullScreenCover(isPresented: $viewModel.movieDetailPage, content: {
+            MovieDetailPage(back: $viewModel.movieDetailPage, selectedMovie: viewModel.selectedMovie)
+        })
     }
 }
 

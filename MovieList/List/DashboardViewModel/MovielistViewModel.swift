@@ -12,10 +12,12 @@ class MovielistViewModel: ObservableObject {
     
     @Published var moviesList: [Result] = []
     @Published var isSearch: Bool = false
+    @Published var movieDetailPage: Bool = false
     
     let apiClient = MoviesAPIClient()
     var pageNumber = 1
     var totalPages = 1
+    var selectedMovie: Result = movieList
     
     func loadAllMovie(searchQurey: String?) {
         AsyncTask {
