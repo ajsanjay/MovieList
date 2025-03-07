@@ -33,10 +33,6 @@ final class MovieList_Tests: XCTestCase {
         }
     }
     
-    /*
-     Since there is no post call and no logical change need for unit test is low priority
-     */
-    
     func testMovieListCell() {
         //Given
         
