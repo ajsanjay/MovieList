@@ -12,6 +12,8 @@ struct HeadingStyle: View {
     let Title: String
     let iConName: String
     
+    @Binding var isSearch: Bool
+    
     var body: some View {
         HStack {
             Image(systemName: iConName)
@@ -23,10 +25,18 @@ struct HeadingStyle: View {
                 .font(.title)
                 .fontWeight(.bold)
             Spacer()
+            Button {
+                isSearch.toggle()
+            } label: {
+                Image(systemName: "magnifyingglass")
+                    .padding(.trailing)
+                    .foregroundColor(.whiteClear)
+                    .fontWeight(.bold)
+            }
         }
     }
 }
 
 #Preview {
-    HeadingStyle(Title: "Hello", iConName: "movieclapper")
+    HeadingStyle(Title: "Hello", iConName: "movieclapper", isSearch: .constant(false))
 }

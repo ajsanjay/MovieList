@@ -10,13 +10,18 @@ import SwiftUI
 struct MoviesListPage: View {
     
     @StateObject private var viewModel = MovielistViewModel()
+    @State var searchText: String
     
     var body: some View {
         ZStack {
             DefaultBG()
             VStack {
                 HStack {
-                    HeadingStyle(Title: "Movies", iConName: "movieclapper")
+                    if viewModel.isSearch {
+                        SearchBarView(searchText: $searchText, isClosedSearch: $viewModel.isSearch)
+                    } else {
+                        HeadingStyle(Title: "Movies", iConName: "movieclapper", isSearch: $viewModel.isSearch)
+                    }
                 }
                 List {
                     ForEach(viewModel.moviesList, id: \.id) { movie in
@@ -40,9 +45,18 @@ struct MoviesListPage: View {
         .onAppear {
             viewModel.loadAllMovie(searchQurey: nil)
         }
+        .onChange(of: viewModel.isSearch) { _, _ in
+            viewModel.pageNumber = 0
+            viewModel.moviesList.removeAll()
+            if !searchText.isEmpty {
+                viewModel.loadAllMovie(searchQurey: searchText)
+            } else {
+                viewModel.loadAllMovie(searchQurey: nil)
+            }
+        }
     }
 }
 
 #Preview {
-    MoviesListPage()
+    MoviesListPage(searchText: "")
 }

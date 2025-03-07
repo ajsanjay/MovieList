@@ -11,6 +11,8 @@ import Alamofire
 class MovielistViewModel: ObservableObject {
     
     @Published var moviesList: [Result] = []
+    @Published var isSearch: Bool = false
+    
     let apiClient = MoviesAPIClient()
     var pageNumber = 1
     var totalPages = 1
@@ -30,7 +32,9 @@ class MovielistViewModel: ObservableObject {
             "api_key": "aafa86502a60244c7844fcc84ca5ecce"
             ]
         if let searchQurey {
-            params["qurey"] = searchQurey
+            if !searchQurey.isEmpty {
+                params["query"] = searchQurey
+            }
         }
         if pageNumber < totalPages {
             pageNumber += 1
@@ -51,7 +55,7 @@ class MovielistViewModel: ObservableObject {
     
     private func getMovieList(searchQurey: String?) async -> [Result]? {
         let param = createParams(searchQurey: searchQurey)
-        let path = searchQurey == nil ? "discover" : "querey"
+        let path = searchQurey == nil ? "discover" : "search"
         let (data, _, _) = await apiClient.fetch(endPoint: "\(path)/movie", param: param)
         if let aData = data {
             guard let response = decodeData(aData) else { return nil }

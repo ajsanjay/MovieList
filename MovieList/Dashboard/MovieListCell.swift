@@ -17,13 +17,16 @@ struct MovieListCell: View {
                 Image(uiImage: image)
                     .resizable()
                     .scaledToFit()
+                VStack() {
+                    Spacer()
+                    MovieTitleStyle(title: viewModel.data.originalTitle)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
             } else {
                 Color.blue
                     .frame(width: screenWidth, height: screenHeight * 0.3)
                     .edgesIgnoringSafeArea(.all)
-                Text("Loading ...")
-                    .font(.caption)
-                    .fontWeight(.bold)
+                MovieTitleStyle(title: "Loading ...")
             }
         }
         .onAppear() {
