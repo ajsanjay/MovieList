@@ -10,6 +10,7 @@ import SwiftUI
 struct MovieDetailPage: View {
     
     @Binding var back: Bool
+    @StateObject private var vm = MovieDetailVM()
     let selectedMovie: Result
     
     var body: some View {
@@ -19,6 +20,7 @@ struct MovieDetailPage: View {
                 NavHeadingStyle(Title: selectedMovie.originalTitle, back: $back)
                 ScrollView {
                     MovieListCell(viewModel: DownloadImageAsyncVM(image: nil, data: selectedMovie, isDetail: true), isDetail: true)
+                    MovieGenerePage(genreNames: vm.getGenreNames(from: selectedMovie.genreIDS))
                     Text(selectedMovie.overview)
                         .padding()
                         .foregroundColor(.whiteClear)

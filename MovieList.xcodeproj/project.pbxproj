@@ -28,6 +28,9 @@
 		8DC2F7D42D7AFED100802812 /* NavHeadingStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC2F7D32D7AFED100802812 /* NavHeadingStyle.swift */; };
 		8DC2F7DD2D7B0A6900802812 /* MovieList_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC2F7DC2D7B0A6900802812 /* MovieList_Tests.swift */; };
 		8DC2F7E62D7B0DA100802812 /* ReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = 8DC2F7E52D7B0DA100802812 /* ReadMe.md */; };
+		8DC2F7E82D7C286900802812 /* MovieGenresModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC2F7E72D7C286800802812 /* MovieGenresModel.swift */; };
+		8DC2F7EB2D7C2A6000802812 /* MovieDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC2F7EA2D7C2A5F00802812 /* MovieDetailVM.swift */; };
+		8DC2F7EF2D7C2D2F00802812 /* MovieGenerePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC2F7EE2D7C2D2F00802812 /* MovieGenerePage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 		8DC2F7DA2D7B0A6900802812 /* MovieList_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieList_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DC2F7DC2D7B0A6900802812 /* MovieList_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieList_Tests.swift; sourceTree = "<group>"; };
 		8DC2F7E52D7B0DA100802812 /* ReadMe.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
+		8DC2F7E72D7C286800802812 /* MovieGenresModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGenresModel.swift; sourceTree = "<group>"; };
+		8DC2F7EA2D7C2A5F00802812 /* MovieDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailVM.swift; sourceTree = "<group>"; };
+		8DC2F7EE2D7C2D2F00802812 /* MovieGenerePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGenerePage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				8DC2F7B32D79B0D000802812 /* MovieListModel.swift */,
+				8DC2F7E72D7C286800802812 /* MovieGenresModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -195,7 +202,9 @@
 		8DC2F7D02D7AEF5800802812 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				8DC2F7E92D7C2A4300802812 /* ViewModel */,
 				8DC2F7D12D7AEFB800802812 /* MovieDetailPage.swift */,
+				8DC2F7EE2D7C2D2F00802812 /* MovieGenerePage.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -206,6 +215,14 @@
 				8DC2F7DC2D7B0A6900802812 /* MovieList_Tests.swift */,
 			);
 			path = MovieList_Tests;
+			sourceTree = "<group>";
+		};
+		8DC2F7E92D7C2A4300802812 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8DC2F7EA2D7C2A5F00802812 /* MovieDetailVM.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DC2F7EB2D7C2A6000802812 /* MovieDetailVM.swift in Sources */,
 				8DC2F7C42D7AC21E00802812 /* MovieListCell.swift in Sources */,
 				8DC2F7CB2D7AC66000802812 /* DownloadImageAsyncLoader.swift in Sources */,
 				8DC2F7BC2D79B3F900802812 /* DefaultBG.swift in Sources */,
@@ -325,6 +343,8 @@
 				8DC2F7C22D7AB9B700802812 /* DecodableWrapper.swift in Sources */,
 				8D0E58182D78621C00CC8FB8 /* MovieListApp.swift in Sources */,
 				8DC2F7CD2D7AD82900802812 /* MovieTitleStyle.swift in Sources */,
+				8DC2F7EF2D7C2D2F00802812 /* MovieGenerePage.swift in Sources */,
+				8DC2F7E82D7C286900802812 /* MovieGenresModel.swift in Sources */,
 				8DC2F7B42D79B0D000802812 /* MovieListModel.swift in Sources */,
 				8DC2F7B82D79B21300802812 /* MovielistViewModel.swift in Sources */,
 				8DC2F7CF2D7ADBE600802812 /* SearchBarView.swift in Sources */,
