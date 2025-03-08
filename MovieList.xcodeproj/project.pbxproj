@@ -31,6 +31,7 @@
 		8DC2F7E82D7C286900802812 /* MovieGenresModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC2F7E72D7C286800802812 /* MovieGenresModel.swift */; };
 		8DC2F7EB2D7C2A6000802812 /* MovieDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC2F7EA2D7C2A5F00802812 /* MovieDetailVM.swift */; };
 		8DC2F7EF2D7C2D2F00802812 /* MovieGenerePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC2F7EE2D7C2D2F00802812 /* MovieGenerePage.swift */; };
+		8DC2F7F12D7C2FCE00802812 /* MovieCertificate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC2F7F02D7C2FCE00802812 /* MovieCertificate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		8DC2F7E72D7C286800802812 /* MovieGenresModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGenresModel.swift; sourceTree = "<group>"; };
 		8DC2F7EA2D7C2A5F00802812 /* MovieDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailVM.swift; sourceTree = "<group>"; };
 		8DC2F7EE2D7C2D2F00802812 /* MovieGenerePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGenerePage.swift; sourceTree = "<group>"; };
+		8DC2F7F02D7C2FCE00802812 /* MovieCertificate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCertificate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 				8DC2F7E92D7C2A4300802812 /* ViewModel */,
 				8DC2F7D12D7AEFB800802812 /* MovieDetailPage.swift */,
 				8DC2F7EE2D7C2D2F00802812 /* MovieGenerePage.swift */,
+				8DC2F7F02D7C2FCE00802812 /* MovieCertificate.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				8DC2F7B42D79B0D000802812 /* MovieListModel.swift in Sources */,
 				8DC2F7B82D79B21300802812 /* MovielistViewModel.swift in Sources */,
 				8DC2F7CF2D7ADBE600802812 /* SearchBarView.swift in Sources */,
+				8DC2F7F12D7C2FCE00802812 /* MovieCertificate.swift in Sources */,
 				8DC2F7BE2D79B62100802812 /* HeadingStyle.swift in Sources */,
 				8DC2F7C82D7AC5F600802812 /* DownloadImageAsyncVM.swift in Sources */,
 				8D0E582E2D7866EF00CC8FB8 /* MoviesAPIClient.swift in Sources */,

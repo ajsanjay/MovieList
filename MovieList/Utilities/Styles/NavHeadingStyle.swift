@@ -10,6 +10,7 @@ import SwiftUI
 struct NavHeadingStyle: View {
     
     let Title: String
+    let isAdult: Bool
     @Binding var back: Bool
     
     var body: some View {
@@ -28,10 +29,12 @@ struct NavHeadingStyle: View {
                 .font(.title)
                 .fontWeight(.bold)
             Spacer()
+            MovieCertificate(adult: isAdult)
+                .padding(.trailing)
         }
     }
 }
 
 #Preview {
-    NavHeadingStyle(Title: "The Lion king", back: .constant(false))
+    NavHeadingStyle(Title: "The Lion king", isAdult: false, back: .constant(false))
 }

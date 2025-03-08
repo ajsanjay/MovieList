@@ -17,7 +17,7 @@ struct MovieDetailPage: View {
         ZStack {
             DefaultBG()
             VStack {
-                NavHeadingStyle(Title: selectedMovie.originalTitle, back: $back)
+                NavHeadingStyle(Title: selectedMovie.originalTitle, isAdult: selectedMovie.adult, back: $back)
                 ScrollView {
                     MovieListCell(viewModel: DownloadImageAsyncVM(image: nil, data: selectedMovie, isDetail: true), isDetail: true)
                     MovieGenerePage(genreNames: vm.getGenreNames(from: selectedMovie.genreIDS))
